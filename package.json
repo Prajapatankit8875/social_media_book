@@ -1,0 +1,24 @@
+{
+  "name": "social_media_book",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"tailwind build users/static/users/tw.css -o users/static/users/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prajapatankit8875/social_media_book.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prajapatankit8875/social_media_book/issues"
+  },
+  "homepage": "https://github.com/Prajapatankit8875/social_media_book#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.16"
+  }
+}
