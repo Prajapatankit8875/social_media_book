@@ -1,8 +1,33 @@
 {% extends "users/base.html" %}
 {% block body %}
-<form method="POST">
+<h1 class="text-2xl m-10">🧑Register user</h1>
+<div class="contanior py-5">
+<form method="POST" class="bg-white shadow-md m-10 w-2/5 rounded px-8 pt-6 pb-8 mb-4">
     {% csrf_token %}
-    {{ user_form.as_p}}
-    <button type="Submit">Register</button>
+    <div class='mb-2'>
+        <lable class='block text-gray-700 text-sm font-bold mb-2' for="">Email</lable>
+        <div class="shadow text-gray-700 appearance-none border border rounded px-2 py-3 mr-10">{{user_form.email}}</div>
+    </div>
+    <div class='mb-2'>
+        <lable class='block text-gray-700 text-sm font-bold mb-2' for="">Username</lable>
+        <div class="shadow text-gray-700 appearance-none border border rounded px-2 py-3 mr-10">{{user_form.username}}</div>
+    </div>
+    <div class='mb-2'>
+        <lable class='block text-gray-700 text-sm font-bold mb-2' for="">First name</lable>
+        <div class="shadow text-gray-700 appearance-none border border rounded px-2 py-3 mr-10">{{user_form.firstname}}</div>
+    </div>
+    <div class='mb-2'>
+        <lable class='block text-gray-700 text-sm font-bold mb-2' for="">Password</lable>
+        <div class="shadow text-gray-700 appearance-none border border rounded px-2 py-3 mr-10">{{user_form.password}}</div>
+    </div>
+    <div class='mb-2'>
+        <lable class='block text-gray-700 text-sm font-bold mb-2' for="">Confirm Password</lable>
+        <div class="shadow text-gray-700 appearance-none border border rounded px-2 py-3 mr-10">{{user_form.password2}}</div>
+    </div>
+     <button class="text-white bg-green-500 px-4 py-2 my-5" type="submit">Register</button>
 </form>
+</div>
+<p class='px-10 py-8'><a class='text-indigo-500' href="{% url 'password_reset' %}">Forgot password? Click here to password</a></p>
+
+
 {% endblock  %}
